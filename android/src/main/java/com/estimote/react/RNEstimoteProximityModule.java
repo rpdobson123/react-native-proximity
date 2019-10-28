@@ -60,7 +60,7 @@ public class RNEstimoteProximityModule extends ReactContextBaseJavaModule {
                 config.getString("appId"), config.getString("appToken"));
 
         ProximityObserverBuilder builder = new ProximityObserverBuilder(reactContext, credentials)
-                .withLowPowerMode()
+                .withBalancedPowerMode()
                 .onError(new Function1<Throwable, Unit>() {
                     @Override
                     public Unit invoke(Throwable throwable) {
